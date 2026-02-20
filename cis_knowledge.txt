@@ -1,0 +1,595 @@
+[Page 36]: Chapter 1 Overview
+This chapter discusses the various conventions that the MasterCard Authorization System
+has adopted from the International Organization for Standardization (ISO) 8583-1987
+message formats. Standard message flows are presented for acknowledgements, advices,
+and error conditions.
+The Customer Interface Specification Format................................................................................1-1
+Issuer Post-on Authorization..........................................................................................................1-2
+Bit Mapped Message Encoding Scheme........................................................................................1-3
+Authorization System Processing Terms and Acronyms.............................................................
+[Page 37]: Overview
+TheCustomerInterfaceSpecificationFormat
+The Customer Interface Specification Format
+This document contains the MasterCard implementation of the ISO 8583–1987
+international message standard for processing authorization information using
+the MasterCard Authorization System. It provides MasterCard customers with
+information necessary for development of an application-level online software
+interface between customer processor systems (CPSs) and the MasterCard
+Authorization System.
+Benefits
+All programs and services carrying the MasterCard brand use the ISO 8583–1987
+message standard.
+Benefits of using the ISO 8583–1987 international message standard include:
+• Flexibility—Customers may use this interface as a “gateway” vehicle to
+other credit card and debit card networks. These networ
+[Page 38]: Overview
+Issuer Post-on Authorization
+Issuer Post-on Authorization
+The Authorization System and all MasterCard programs and services employ the
+“Post-on-Authorization” concept for handling issuer side transaction processing
+of authorization messages. This concept ensures necessary system integrity and
+optimizes efficient use of network resources.
+The “Post-on-Authorization” concept is far more efficient than the alternative
+“Post-on-Completion” processing method. It does not require Completion
+Confirmation and Completion Response messages in order for the issuer
+processing system (IPS) to process Authorization Request/0100 messages.
+In contrast, the “Post-on-Completion” method does require propagation of
+Completion Confirmation and Completion Response messages between the
+acquirer and the 
+[Page 39]: Overview
+BitMappedMessageEncodingScheme
+NOTE
+The term “post” in Post-on-Authorization does not refer to actual posting of
+cardholder accounts for billing purposes. Post-on-Authorization refers only
+to the technique used to maintain accurate settlement reconciliation totals
+betweentheAuthorizationSystemandanyattachedCPS.TheIPShandlesactual
+postingofcardholderaccountdataforcardholderbillingpurposes. Postingof
+thecardholderaccountdataisnotanAuthorizationSystemfunction.
+Bit Mapped Message Encoding Scheme
+A description of the bit map scheme.
+All customer interface specification (CIS) messages are variable-length, with a
+bit map scheme used as the first data element(s) of the message following the
+Message Type Identifier (MTI) to indicate the presence or absence of additional
+data elements in th
+[Page 40]: Overview
+Authorization System Processing Terms and Acronyms
+Authorization System Processing Terms and Acronyms
+Authorization System processing terms and acronyms are used in describing the
+logical flow of an Authorization System message from one point to another.
+The following Authorization System terms or acronyms are used in describing
+the CIS message format:
+• Acquirer processing system (APS)
+• Customer processing system (CPS)
+• Issuer processing system (IPS)
+• Point of Sale (POS)
+Customer Interface Specification Notations
+The Customer Interface Specification notations describe the Customer Interface
+Specification (CIS) format.
+The CIS format is described with the following notations:
+• Data Length
+• Data Representation
+• Date and Time
+• Entities
+• Presence
+• Presence Requirements
+Data 
+[Page 41]: Overview
+CustomerInterfaceSpecificationNotations
+Notation Description
+...digit(s) Variable length, with maximum number of positions specified.
+Example: “n...11” indicates a variable-length numeric data element
+of 1–11 digits.
+Example: “an...25” indicates a variable-length alphanumeric data
+element of 1–25 positions.
+LLVAR Present with a variable-length data element attribute, indicates that the
+data element contains two fields:
+LL The length field and represents the number of positions in
+the variable-length data field that follows. The length field
+contains a value in the range 01–99.
+VAR The variable-length data field
+Example: “an…25; LLVAR” represents a variable-length
+alphanumericdataelementwithalengthof1–25positions.
+LLLVAR Present with a variable-length data element attribute, indica
+[Page 42]: Overview
+Customer Interface Specification Notations
+Notation Description
+b binary representation of data in eight-bit bytes
+All binary data elements are constructed of bit-strings that have
+lengths that are an integral number of eight-bit bytes. No binary
+data element has a length of less than eight bits (one byte)
+“b-8” indicates a fixed-length binary field of eight characters
+(eight bytes, 64 bits).
+s special character
+ns numeric and special characters
+All track 2 or track 3 (attribute “ans”) data elements are encoded as EBCDIC
+representations of the hexadecimal data specified in the ISO 7811 and 7812
+specifications. Thus, a hexadecimal “D” (binary 1101) is encoded as an EBCDIC “D”
+character, and so forth. The “LL” or “LLL” length specification associated with these
+data elements specifi
+[Page 43]: Overview
+CustomerInterfaceSpecificationNotations
+Date and Time Notations
+Date and time notations indicate the format of the data that represents date
+and time.
+Notation Description
+MM month (two digits; 01–12)
+DD day (two digits; 01–31)
+YY year (last two digits of calendar year; 00–99)
+hh hour (two digits; 00–23)
+mm minute (two digits; 00–59)
+ss second (two digits; 00–59)
+Entity Notations
+Entity notations identify who is responsible for a message (acquirer, issuer,
+processor, or the Authorization System) at any given point.
+Purpose
+Several entities may insert or modify data elements in an Authorization System
+message as it flows from the message origin to the Authorization System and
+from the Authorization System to the message destination. These entities
+typically include the member or pr
+[Page 44]: Overview
+Customer Interface Specification Notations
+Presence Notations
+Presence notations indicate if and how data is present. These notations appear
+in the originator (Org), Authorization System (Sys), and destination (Dst).
+Notation Description
+M Mandatory. The data element is required in the message.
+C Conditional. The data element is required in the message if the
+conditions described in the accompanying text apply.
+O Optional. The data element is not required, but may be included in
+the message at the message initiator’s option.
+X Authorization System. The Authorization System may (or will) insert
+or overwrite the data element, depending on specific Authorization
+System support services provided for individual programs and
+services.
+ME Mandatory Echo. The data element is required in a
+[Page 45]: Overview
+CustomerInterfaceSpecificationNotations
+Org Sys Dst Description
+• X M Authorization System always provides the data element.
+O • C Optional; originator may provide the data element.
+O X C Optional; originator may provide the data element;
+Authorization System adjusts/appends data.
+M • • Mandatory; originator must provide the data element;
+Authorization System does not forward data.
+C • • Conditionally required; Authorization System does not forward
+data.
+O • • Optional; Authorization System does not forward data.
+• X • MasterCard use only.
+Program and Service Category Notations
+Program and Service Category notations identify the various programs and
+services.
+Notation Description
+MC All MasterCard activity the Authorization System processes.
+NP Network processing services activity
+[Page 46]: Overview
+Authorization System Messages
+Authorization System Messages
+Authorization System messages are those financial transaction messages used
+to transmit authorization, file update, reversal, administrative, and network
+management data across the MasterCard Worldwide Network.
+The Authorization System supports the following financial transaction message
+types:
+• Authorization/01xx messages
+• Issuer File Update/03xx messages
+• Reversal/04xx messages
+• Administrative/06xx messages
+• Network Management/0800 messages
+List of Authorization Messages
+The following table lists the message types the Authorization System supports
+and indicates the entities that each message type originates with. The
+Authorization System may not support all message types for each MasterCard
+program or service.
+Auth
+[Page 47]: Overview
+ListofAuthorizationMessages
+Authorization
+MTI Description Acquirer Issuer System
+IssuerFileUpdate/03xxmessages
+0302 Issuer File Update Request Ö
+0312 Issuer File Update Request Response Ö
+Reversal/04xxmessages
+0400 Reversal Request Ö
+0410 Reversal Request Response Ö Ö
+0420 Reversal Advice Ö
+0430 Reversal Advice Response Ö
+Administrative/06xxmessages
+0600 Administrative Request Ö
+0610 Administrative Request Response Ö
+0620 Administrative Advice Ö Ö Ö
+0630 Administrative Advice Response Ö Ö
+NetworkManagement/08xxmessages
+0800 Network Management Request—Sign-On/Sign-Off1 Ö Ö
+0800 Network Management Request—SAF Request Ö
+0800 Network Management Request—RiskFinder SAF Ö
+Request
+0800 Network Management Request—Network Ö Ö
+Connection Status, Member-generated
+0800 Network Management Reque
+[Page 48]: Overview
+MessageTypeIdentifierPresenceRequirementsbyProgramandService
+Authorization
+MTI Description Acquirer Issuer System
+0810 Network Management Request Response—Sign- Ö
+On/Sign-Off
+0810 Network Management Request Response—SAF Ö
+Request
+0810 Network Management Request Response—Risk- Ö
+Finder SAF Request
+0810 Network Management Request Response—Network Ö Ö
+Connection Status, Member-generated
+0810 Network Management Request Response—Network Ö
+Connection Status, System-generated
+0810 Network Management Request Response/—Host Ö Ö Ö
+Session Activation/Deactivation
+0810 Network Management Request Response/—PEK Ex- Ö Ö
+change
+0810 Network Management Request Response/—PEK Ex- Ö
+change–On Demand
+0820 Network Management Advice—RiskFinder SAF End Ö
+of File2
+0820 Network Management Advice—PEK Exchan
+[Page 49]: Overview
+MessageTypeIdentifierPresenceRequirementsbyProgramandService
+MTI Description MC NP VI TE MS CI
+0130 Authorization Advice Response—Issuer-generated Ö Ö Ö Ö Ö Ö
+(Responding to an Acquirer-generated 0120)
+0130 Authorization Advice Response—Issuer-generated Ö Ö Ö Ö Ö Ö
+(Responding to a System-generated 0120 from SAF)
+0130 Authorization Advice Response—System-generated Ö Ö Ö Ö Ö Ö
+0180 Authorization Acknowledgement X X X X X X
+0190 Authorization Negative Acknowledgement Ö Ö Ö Ö Ö Ö
+0302 Issuer File Update Request Ö Ö • • Ö Ö
+0312 Issuer File Update Request Response Ö Ö • • Ö Ö
+0400 Reversal Request/0400 Ö Ö Ö • Ö Ö
+0410 Reversal Request Response/0410 Ö Ö Ö • Ö Ö
+0420 Reversal Advice Ö Ö Ö • Ö Ö
+0430 Reversal Advice Response Ö Ö Ö • Ö Ö
+0600 Administrative Request/0600 Ö Ö • • • •
+0610 
+[Page 50]: Overview
+Character Sets
+Character Sets
+Character sets define how letters, numbers, symbols, and special characters are
+displayed in computer text.
+What Character Sets does MasterCard Support?
+MasterCard supports the following code pages for both standard and extended
+character sets:
+• ASCII (ISO 8859-1)
+• EBCDIC (Code Page 1047)
+MasterCard supports standard EBCDIC formatted messages and bulk files. In
+addition to standard EBCDIC, MasterCard also supports the extended EBCDIC
+format as well as the standard and extended ASCII format for both authorization
+messages and selected bulk files. Members using the MIP to transmit bulk
+files will still need to adhere to the existing MasterCard File Transfer Protocol
+format—that is, EBCDIC (for Header and Trailer information).
+Extendedcharacters: Withi
+[Page 51]: Overview
+CharacterSets
+Extended ASCII to Extended EBCDIC Character Set Conversion
+Following is the list of how the extended ASCII character set is converted or
+mapped to the extended EBCDIC character set.
+ASCII ASCII EBCDIC EBCDIC
+Decimal Hexadecimal Decimal Hexadeci- Character
+Value Value Value malValue Representation Definition
+192 C0 100 64 À Capital A, grave accent
+193 C1 101 65 Á Capital A, acute accent
+194 C2 98 62 Â Capital A, circumflex
+accent
+195 C3 102 66 Ã Capital A, tilde
+196 C4 99 63 Ä Capital A, dieresis or
+umlaut mark
+197 C5 103 67 Å Capital A, ring
+198 C6 158 9E Æ Capital AE diphthong
+199 C7 104 68 Ç Capital C, cedilla
+200 C8 116 74 È Capital E, grave accent
+201 C9 113 71 É Capital E, acute accent
+202 CA 114 72 Ê Capital E, circumflex
+accent
+203 CB 115 73 Ë Capital E, diere
+[Page 52]: Overview
+Character Sets
+ASCII ASCII EBCDIC EBCDIC
+Decimal Hexadecimal Decimal Hexadeci- Character
+Value Value Value malValue Representation Definition
+213 D5 239 EF Õ Capital O, tilde
+214 D6 236 EC Ö Capital O, dieresis or
+umlaut mark
+215 D7 191 BF × Multiply sign
+216 D8 128 80 Ø Capital O, slash
+217 D9 253 FD Ù Capital U, grave accent
+218 DA 254 FE Ú Capital U, acute accent
+219 DB 251 FB Û Capital U, circumflex
+accent
+220 DC 252 FC Ü Capital U, dieresis or
+umlaut mark
+221 DD 186 BA Ý Capital Y, acute accent
+222 DE 174 AE Þ Capital THORN, Icelandic
+223 DF 89 59 ß Small sharp s, German
+(sz ligature)
+224 E0 68 44 à Small a, grave accent
+225 E1 69 45 á Small a, acute accent
+226 E2 66 42 â Small a, circumflex accent
+227 E3 70 46 ã Small a, tilde
+228 E4 67 43 ä Small a, dieresis or umlaut
+mark
+
+[Page 53]: Overview
+CharacterSets
+ASCII ASCII EBCDIC EBCDIC
+Decimal Hexadecimal Decimal Hexadeci- Character
+Value Value Value malValue Representation Definition
+237 ED 85 55 í Small i, acute accent
+238 EE 86 56 î Small i, circumflex accent
+239 EF 87 57 ï Small i, dieresis or umlaut
+mark
+240 F0 140 8C ð Small eth, Icelandic
+241 F1 73 49 ñ Small n, tilde
+242 F2 205 CD ò Small o, grave accent
+243 F3 206 CE ó Small o, acute accent
+244 F4 203 CB ô Small o, circumflex accent
+245 F5 207 CF õ Small o, tilde
+246 F6 204 CC ö Small o, dieresis or umlaut
+mark
+247 F7 225 E1 ÷ Division sign
+248 F8 112 70 ø Small o, slash
+249 F9 221 DD ù Small u, grave accent
+250 FA 222 DE ú Small u, acute accent
+251 FB 219 DB û Small u, circumflex accent
+252 FC 220 DC ü Small u, dieresis or umlaut
+mark
+253 FD 141 8D ý Small y, acu
+[Page 54]: Overview
+Character Sets
+Swedish Domestic Authorization Switching Character Set
+Members using the Swedish Domestic Authorization Switching Service (SASS)
+also may support Swedish national characters in EBCDIC as described in the
+following table.
+EBCDICIBM-278 EBCDIC(Hexadecimal) ASCII(Hexadecimal) Graphic Attribute
+Å 5B 24 $ s
+Ä 7B 23 # s
+Ö 7C 40 @ s
+å D0 7d } s
+ä C0 7b { s
+©1997–2010 MasterCard
+1-18 10 September 2010 • Customer Interface Specification
+[Page 55]: Chapter 2 Message Definitions and Flows
+This chapter provides message definitions of all message types the Authorization System
+uses followed by the detailed message flow diagrams that illustrate both the standard and
+exception (error condition) message processing.
+About Message Definitions............................................................................................................2-1
+About Authorization Messages.................................................................................................2-1
+Authorization Request/0100...............................................................................................2-1
+Authorization Request Response/0110...............................................................................2-2
+About Authorization Advic
+[Page 56]: Message Definitions and Flows
+Network Management Advice/0820.................................................................................2-11
+About Message Flows..................................................................................................................2-12
+Authorization Message Routing Timers..................................................................................2-12
+Authorization Request/0100 and Authorization Request Response/0110...............................2-13
+Authorization Request/0100—Communication Failure at Acquirer........................................2-14
+Authorization Request/0100—Communication Failure at Issuer............................................2-15
+Authorization Request Response/0110—Communication Failure at Acquirer..........
+[Page 57]: Message Definitions and Flows
+Authorization Request Response/0110—Alternate Issuer Allowed..................................2-49
+Authorization Request Response/0110—Not Received within Time Limit.......................2-51
+Authorization Request Response/0110—Received within the Time Limit but after
+Alternate Issuer Response................................................................................................2-53
+Authorization Request Response/0110—Received within the Time Limit and before
+Alternate Issuer Response................................................................................................2-55
+Authorization Response Negative Acknowledgement/0190 (Responding to the
+Authorization Request Response/0110)..............................................................
+[Page 58]: Message Definitions and Flows
+Network Management Request/0800—Host Session Activation/Deactivation........................2-85
+Network Management Request/0800—PEK Exchange Authorization System-Initiated...........2-86
+Network Management Request/0800—PEK Exchange Member-Initiated...............................2-87
+©1997–2010 MasterCard
+2-iv 10 September 2010 • Customer Interface Specification
+[Page 59]: Message Definitions and Flows
+AboutMessageDefinitions
+About Message Definitions
+Message definitions describe the general purpose, type, routing, and response
+information of each Authorization System message type.
+About Authorization Messages
+The authorization message definitions define the authorization request, advice,
+and response message types.
+Authorization/01xx messages transport authorization-related information.
+“Authorization” is a term applied to transactions for which, by design, there is
+partial transaction data contained within the individual messages; no actual
+posting of accounts at the issuer processing system (IPS) occurs during this
+type of transmission. Consequently, all Authorization/01xx messages and
+advice transactions assume that follow-up information (for example, pa
+[Page 60]: Message Definitions and Flows
+About Message Definitions
+Authorization Request Response/0110
+The Authorization Request Response must be sent in response to an
+Authorization Request/0100 message; it carries the response information
+required to service (approve or deny) the Authorization Request/0100 message.
+Type Interactive
+Routing
+• From an IPS to the Authorization System.
+• From the Authorization System to an APS.
+Response The APS may provide an Authorization Acknowledgement/0180
+message to the Authorization System to acknowledge positive
+receipt of the Authorization Request Response/0110 message from
+theAuthorizationSystem. TheAuthorizationAcknowledgement/0180
+messageisoptionalforanAPS.
+About Authorization Advice Messages
+The Authorization System uses guaranteed advice message delivery f
+[Page 61]: Message Definitions and Flows
+AboutMessageDefinitions
+• Authorization Advice/0120—Acquirer-generated
+• Authorization Advice/0120—Issuer-generated (to RiskFinder)
+• Authorization Advice/0120—System-generated
+• Authorization Advice Response/0130—Issuer-generated (Responding to a
+System-generated 0120 from SAF)
+• Authorization Advice Response/0130—Issuer-generated (Responding to
+an Acquirer-generated 0120)
+• Authorization Advice Response/0130—Issuer-generated (Responding to a
+System-generated 0120 from SAF)
+• Authorization Advice Response/0130—System-generated
+Authorization Advice/0120—Acquirer-generated
+The Authorization Advice/0120—Acquirer-generated message advises of an
+authorization that was carried out on the issuer’s behalf. It is not intended to
+permit the application of this transact
+[Page 62]: Message Definitions and Flows
+About Message Definitions
+Type Noninteractive
+Routing From the Authorization System to an IPS.
+Response An Authorization Advice Response/0130—Issuer-generated message
+is required.
+Authorization Advice Response/0130—Issuer-generated
+(Responding to an Acquirer-generated 0120)
+The Authorization Advice Response/0130—Issuer-generated message indicates
+positive receipt of an Authorization Advice/0120—Acquirer-generated message.
+Type Noninteractive
+Routing From the IPS to the APS when responding to the Authorization
+Advice/0120—Acquirer-generated message.
+Response None
+Authorization Advice Response/0130—Issuer-generated
+(Responding to a System-generated 0120 from SAF)
+The Authorization Advice Response/0130—Issuer-generated message indicates
+positive receipt of an Aut
+[Page 63]: Message Definitions and Flows
+AboutMessageDefinitions
+About Authorization Response Acknowledgement Messages
+For APS customers, the Authorization System provides optional
+interactive response acknowledgement for Authorization/0100 messages.
+Acknowledgement messages indicate positive receipt of a response or advice
+message.
+Acquirers are not required to support Authorization Response
+Acknowledgement/0180 messages, but MasterCard encourages acquirer
+customers to select this option and to support these messages. Customers may
+select this option at network configuration time.
+The Authorization Response Acknowledgement messages include:
+• Authorization Response Acknowledgement/0180
+• Authorization Response Negative Acknowledgement/0190
+Authorization Acknowledgement/0180
+The Authorization Advice 
+[Page 64]: Message Definitions and Flows
+About Message Definitions
+About Issuer File Update Messages
+Issuers use Issuer File Update/03xx messages to update individual data files or
+system parameter tables that the Authorization System maintains on their behalf.
+The Authorization System uses these data files to control the operation of
+standard and optional features that customers may select when they participate
+in one or more of the MasterCard program and service offerings.
+The Issuer File Update messages include:
+• Issuer File Update Request/0302
+• Issuer File Update Request Response/0312
+Issuer File Update Request/0302
+The Issuer File Update Request/0302 message requests an Issuer File Update or
+inquiry action to be initiated on the issuer’s behalf.
+Type Interactive
+Routing From an IPS to the Auth
+[Page 65]: Message Definitions and Flows
+AboutMessageDefinitions
+Reversal/04xx messages include:
+• Reversal Request/0400
+• Reversal Request Response/0410
+• Reversal Advice/0420
+• Reversal Advice Response/0430
+Reversal Request/0400
+The Reversal Request/0400 message reverses fully or partially an earlier
+authorization request.
+Type Interactive
+Routing From acquirer to the issuer or intermediate network facility.
+Response A Reversal Request Response/0410 message is required.
+Reversal Request Response/0410
+The Reversal Request Response/0410 message is sent in response to a Reversal
+Request/0400 message and denotes the disposition of the Reversal Request/0400
+message.
+Type Interactive
+Routing From the issuer to the acquirer
+Response None
+Reversal Advice/0420
+The Reversal Advice/0420 message fully reverses
+[Page 66]: Message Definitions and Flows
+About Message Definitions
+Reversal Advice Response/0430
+The Reversal Advice Response/0430 message must be sent in response to a
+Reversal Advice/0420 message to acknowledge positive receipt of that message.
+Type Noninteractive
+Routing From an IPS to the Authorization System.
+Response None
+About Administrative Messages
+Administrative messages requests confirmation of data or transmits data
+in a format other than identified in this International Standard. Member
+generated advice messages are used to transmit administrative (free format)
+textual messages between any two parties participating as members on the
+Authorization System. Authorization system generated advice messages return
+indecipherable messages to a message originator and transmit to an issuer risk
+sc
+[Page 67]: Message Definitions and Flows
+AboutMessageDefinitions
+Administrative Request Response/0610
+The Authorization System forwards from the issuer to the acquirer an
+Administrative Request Response/0610 message that contains the issuer’s
+response data, if the issuer provided a timely response or DE 39 (Response
+Code), value 91 (Authorization System or issuer system inoperative), if an issuer
+response is not provided within applicable time limits.
+Type Interactive
+Routing From issuer to acquirer
+Response none
+Administrative Advice/0620
+Administrative Advice/06xx messages are “administrative” messages that two
+parties participating in a given MasterCard program or service offering may use
+when using the Authorization System.
+The Authorization System routes messages from an “originator” to a “recei
+[Page 68]: Message Definitions and Flows
+About Message Definitions
+• Administrative Advice/0620—Member-generated messages are used to
+transmit administrative (free format) textual messages between any two
+parties participating as members on the Authorization System.
+Type Noninteractive
+Routing Between any two parties participating on the Authorization
+System.
+Response An Administrative Advice Response/0630 message is
+required.
+Administrative Advice Response/0630
+The Administrative Advice Response/0630 message must be sent in response
+to an Administrative Advice/0620 message to acknowledge positive receipt
+of that message.
+Type Noninteractive
+Routing From the receiver to the originator of the related
+Administrative Advice/0620 message.
+Response None
+About Network Management Messages
+The Authorization 
+[Page 69]: Message Definitions and Flows
+AboutMessageDefinitions
+The Authorization System routes Network Management/08xx messages from an
+“originator” to a “receiver” and, in general, does not distinguish whether the
+originator or receiver is an issuer or an acquirer.
+Network Management Request/0800
+The Network Management Request/0800 message controls the MasterCard
+Worldwide Network by communicating or coordinating system condition
+or system security. DE 70, a mandatory data element in all Network
+Management/08xx messages, determines specific Network Management/08xx
+message functions.
+Type Interactive
+Routing Between the Authorization System and any other party (such as
+CPS, APS, IPS, INF) communicating directly with the Authorization
+System. May be originated by either party.
+Response A Network Man
+[Page 70]: Message Definitions and Flows
+About Message Flows
+About Message Flows
+Message flows describe the overall standard and exception process of a
+message type or message pair in various scenarios. Each message flow
+provides an illustration of the process with the associated stages that describe
+each part of the process. All Authorization/01xx message flows are illustrated
+without showing the optional (acquirer-selected) use of the Authorization
+Acknowledgement/0180 message.
+Authorization Message Routing Timers
+Following are the specific Authorization System message routing timer
+values applicable to acquirer-generated 0100, 0120, and 0400 messages. All
+system-generated Advice/0120, Issuer File Update/03xx, Administrative/06xx,
+and Network Management/08xx, messages remain unchanged and retain th
+[Page 71]: Message Definitions and Flows
+AboutMessageFlows
+Authorization Request/0100 and Authorization Request
+Response/0110
+This message flow describes the standard authorization transaction process.
+1. The acquirer initiates an Authorization Request/0100 message and sends it
+to the Authorization System.
+2. The Authorization Sy
