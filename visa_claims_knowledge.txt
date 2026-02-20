@@ -1,0 +1,88 @@
+=== Visa Claims Resolution (VCR) ===
+
+Visa Claims 
+Resolution manual 
+
+Date:  2/15/18 
+
+Simon Carmiggeltstraat 6-50 
+1011 DJ Amsterdam 
+
+The Netherlands 
+
+Page 1  |  © 2018 Adyen BV 
+
+www.adyen.com 
+
+ 
+ 
+ 
+ 
+ 
+Introduction ................................................................................................................. 3	
+1.1 VCR ................................................................................................................................................................................ 3	
+1.2 The main changes .......................................................................................................................................................... 3	
+1.2.1 Different workflows ...................................................................................................................................................... 3	
+1.2.1.1 Allocation .................................................................................................................................................................. 3	
+1.2.2 Chargeback threshold ................................................................................................................................................. 4	
+1.3 Collaboration .................................................................................................................................................................. 4	
+1.4 New VCR reason codes ................................................................................................................................................. 4	
+1.5 Request for Information (RFI) ......................................................................................................................................... 5	
+
+Allocation ..................................................................................................................... 6	
+2.1 Pre-arbitration and Arbitration ........................................................................................................................................ 6	
+2.2 Arbitration ....................................................................................................................................................................... 6	
+2.2 Compelling evidence Allocation workflow ...................................................................................................................... 6	
+2.2.1 Compelling evidence fraudulent disputes .................................................................................................................... 6	
+
+Collaboration ............................................................................................................... 9	
+3.1 Compelling evidence Collaboration workflow ................................................................................................................. 9	
+3.1.2 Compelling evidence Consumer Disputes ................................................................................................................ 10	
+3.1.3 Compelling evidence processing errors .................................................................................................................... 11	
+
+Page 2  |  © 2018 Adyen BV 
+
+ 
+ 
+ 
+Introduction 
+This document is intended as a guideline for merchants in understanding Visa Claims Resolution (VCR). 
+
+1.1 VCR 
+Visa  has  announced  a  new  global  dispute  resolution  process,  called  VCR.  This  new  process  is  introduced  in  order  to 
+improve  the  efficiency  of  handling  chargebacks.  It  is  designed  to  have  chargebacks  resolved  faster  and  easier  with 
+system edits that will prevent invalid disputes from entering the system. 
+
+VCR will go live in Hong Kong and  New Zealand end of  October  2017.  Incoming  domestic  disputes  in  these  countries 
+and disputes between the two countries will use the VCR dispute process.  
+
+Remaining countries will migrate as of April 2018. All incoming disputes after this date will be processed with VCR. 
+
+1.2 The main changes 
+The existing 22 chargeback reason codes will be replaced by new reason codes and grouped into 4 categories:  
+
+Fraud 
+
+Authorization 
+
+Processing Error 
+
+Consumer Disputes 
+
+1.2.1 Different workflows 
+Disputes will be routed in two different workflows, called Allocation and Collaboration. 
+
+Fraud 
+
+Authorization 
+
+Allocation 
+
+Processing Error 
+
+Consumer Disputes 
+
+Collaboration 
+
+1.2.1.1 Allocation 
+Fraud  and  Authorization  related  chargebacks  will  be

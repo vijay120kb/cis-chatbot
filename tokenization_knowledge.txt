@@ -1,0 +1,298 @@
+=== Payment Tokenization Guide ===
+
+White Paper 
+Tokenization: 
+Everything You Need to Know 
+
+Contents
+
+Executive summary 
+
+1.  What is tokenization? 
+
+1.1 A definition 
+
+1.2 Tokenization – a brief history 
+
+1.3 How are tokens used? 
+
+1.4 What is the aim of tokenization?  
+
+2. 
+
+Different types of tokens 
+
+2.1 How can tokens be used to protect payments? 
+
+2.2 Tokenization is already here 
+
+2.3 Tokens…a step further 
+
+2.4 When tokens are a step too far…  
+
+3. 
+
+4. 
+
+So who should be the token service provider (TSP)? 
+
+The future of tokenization 
+
+About the author  
+
+About Bell ID 
+
+3 
+
+5 
+
+5
+
+7
+
+8
+
+9
+
+10
+
+12
+
+13
+
+15
+
+16
+
+18
+
+23 
+
+25 
+
+26
+
+2
+2
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Executive Summary  
+
+Tokens are used in a number of environments to replace and 
+
+near field communication (NFC) payments (any of the OEM Pays, 
+
+protect the underlying value of credentials. In the payments world, 
+
+and all forms of cloud based payments); as well as being used 
+
+tokenization is primarily used to secure payment card data. This can 
+
+increasingly for secure remote payments in e-commerce/m-
+
+be done using EMVCo Tokenization for card payment transactions 
+
+commerce.  Therefore, the critical question for most issuers is not 
+
+or Payment Card Industry (PCI) Tokenization for card-on-file 
+
+‘if’ to tokenize, but instead ‘where’ to tokenize.  It is important to do 
+
+data, which is stored in merchants’ or acquirers’ systems after a 
+
+this in the most efficient and effective way to support that issuer’s 
+
+transaction is completed.
+
+short, medium and long term strategic goals.
+
+This v is primarily focused on EMVCo Tokenization, although it will 
+
+also address the use of the same underlying security mechanisms 
+
+and technology for use cases beyond bank payment cards. EMVCo 
+
+Tokenization is already a de facto requirement for a number of 
+
+card payment environments: card-on-file (at merchants); mobile 
+
+The critical question for most 
+issuers is not ‘if’ to tokenize, 
+but instead ‘where’ to tokenize.
+
+3
+3
+
+ 
+US-based issuers of early payment industry tokenization initiatives 
+
+Outside of the US, many issuers can strategically consider 
+
+had very limited (or no) deployment options, since their services 
+
+tokenization from day one. This needs to be done quickly given 
+
+were implemented by the payment networks.  Now, however, 
+
+the accelerating pace of global mobile NFC payments rollout, the 
+
+many issuers want to regain control of their cardholder payments 
+
+increasing frequency of data breaches at merchants and the growth 
+
+processing. The opportunity to deepen their understanding of 
+
+in fraud rates in the rapidly expanding e/m-commerce payments 
+
+cardholder transaction behavior, together with the growing number 
+
+environment.
+
+of payment channels that can be processed as separate token 
+
+domains and the enhanced token controls that can now be applied 
+
+to the process, are all factors that are driving issuers to establish a 
+
+cost effective token processing service before moving to significant 
+
+production volumes.
+
+This white paper looks to inform the reader on 
+the subject of tokenization, specifically. What is 
+tokenization? How can it be implemented? Why 
+is this payment solution getting so much industry 
+attention?
+
+For those still relatively new to tokenization, this white paper 
+
+includes valuable references to help readers get to grips with the 
+
+subject, including information on token service providers, token 
+
+vaults and token domains. 
+
+4
+4
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+01  
+What is  
+Tokenization?
+
+1.1  A definition 
+
+The process of tokenization replaces sensitive data with surrogate 
+
+In an EMV® payments context and in simple terms, the EMVCo 
+
+values, i.e. tokens, which remove risk but preserve value to the 
+
+Payment Tokenization Specification for payment cards requires 
+
+business.  These tokens are then used in place of the sensitive data 
+
+the replacement of the card’s primary account number (PAN) with 
+
+throughout the channel ecosystem, or token domain, until they can 
+
+an alternate unique identification number, or ‘token’.  To allow 
+
+be mapped back (de-tokenized), in a secure environment, to the 
+
+this token to be processed over the EMVCo stakeholders’ existing 
+
+original value allowing any subsequent processing or reconciliation 
+
+payments infrastructure, the token must be formatted to look like a 
+
+to take place. 
+
+PAN. This enables transac

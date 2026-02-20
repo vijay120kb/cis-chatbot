@@ -1,0 +1,56 @@
+=== Worldpay ISO 8583 Reference Guide ===
+
+ISO 8583 Reference Guide
+
+October 2019
+
+ V2.11
+
+ISO 8583 Reference Guide:  V2.11
+
+All information whether text or graphics, contained in this manual is confidential and proprietary information of Worldpay, LLC and is provided 
+to you solely for the purpose of assisting you in using a Worldpay, LLC product. All such information is protected by copyright laws and 
+international treaties. No part of this manual may be reproduced or transmitted in any form or by any means, electronic, mechanical or otherwise 
+for any purpose without the express written permission of Worldpay, LLC. The possession, viewing, or use of the information contained in this 
+manual does not transfer any intellectual property rights or grant a license to use this information or any software application referred to herein 
+for any purpose other than that for which it was provided. Information in this manual is presented "as is" and neither Worldpay, LLC or any other 
+party assumes responsibility for typographical errors, technical errors, or other inaccuracies contained in this document. This manual is subject to 
+change without notice and does not represent a commitment on the part Worldpay, LLC or any other party. Worldpay, LLC does not warrant that 
+the information contained herein is accurate or complete.
+
+Worldpay, the logo and any associated brand names are trademarks or registered trademarks of Worldpay, LLC and/or its affiliates in the US, UK 
+or other countries. All other trademarks are the property of their respective owners and all parties herein have consented to their trademarks 
+appearing in this manual. Any use by you of the trademarks included herein must have express written permission of the respective owner.
+
+Copyright © 2003-2019, Worldpay, LLC and/or its affiliates - ALL RIGHTS RESERVED.
+
+CONTENTS
+
+ About This Guide
+
+Intended Audience .......................................................................................................................xv
+Revision History ...........................................................................................................................xv
+Document Structure .................................................................................................................. xxiii
+Typographical Conventions ...................................................................................................... xxiv
+Contact Information.................................................................................................................... xxv
+
+Chapter 1 Introduction
+
+Rules and Regulations.................................................................................................................. 2
+Field Data Definitions .............................................................................................................. 2
+Surcharging Requirements ..................................................................................................... 4
+TCP/IP Network Management ................................................................................................ 5
+Merchant Customer Rules ...................................................................................................... 5
+Host Data Capture Message Set .................................................................................................. 6
+The Message Type Identifier .................................................................................................. 6
+The Bit Map............................................................................................................................. 6
+Value-Added Service .................................................................................................................... 8
+Card Security Products ........................................................................................................... 8
+
+Chapter 2 Host Data Capture and Credit EMD Message Sets
+
+Authorization Request and Response Messages ....................................................................... 12
+0100 Authorization Request.................................................................................................. 12
+0110 Authorization Response............................................................................................... 20
+0120 Authorization Advice Request...................................................................................... 27
+0130 Authorization Advice Response .....................

@@ -1,0 +1,208 @@
+=== MasterCard Chargeback Guide ===
+
+Chargeback Guide
+
+1 May 2018
+
+TB
+
+Summary of Changes, 1 May 2018
+
+Summary of Changes, 1 May 2018
+
+This document reflects changes made since the last publication.
+
+Description of Change
+
+Where to Look
+
+Chapter 2 Dual Message System Chargebacks
+
+Changed table title from: Goods or Services Not
+Provided -European Transactions for Travel
+Services to Failed Travel Merchant-Intra-EEA and
+Domestic European Transactions Only.
+
+Updated table: Chargeback Condition, Time
+Frame, Message Reason Code, Supporting
+Document, and Notes.
+
+Failed Travel Merchant—Intra-EEA and Domestic
+European Transactions Only
+
+Failed Travel Merchant—Intra-EEA and Domestic
+European Transactions Only
+
+Updated table: Proper Disclosure in Notes section Credit Not Processed
+
+Updated table: Notes section
+
+Addendum Dispute
+
+Changed title from Good or Services Not
+Provided--European Transactions for Travel
+Services to Failed Travel Merchant—Intra-EEA and
+Domestic European Transactions Only
+
+Updated table sections: IPM Second Presentment
+Message Reason Code, supporting Documents,
+and Notes.
+
+Failed Travel Merchant—Intra-EEA and Domestic
+European Transactions Only
+
+Updated table section: Supporting Documents
+
+General Arbitration Chargeback
+
+Added 2 bullets: Taiwan only and Mastercard
+Biometric Card to bullet list
+
+No Cardholder Authorization 
+
+Added under CAT 2 Transactions MCC codes
+
+No Cardholder Authorization
+
+Updated bullet: Properly identified Mastercard
+SecureCode, Masterpass by Mastercard, and
+Digital Secure Remote Payment (DSRP)
+transactions
+
+Updated third bullet in topic
+
+Mastercard SecureCode SL1 (Merchant-only
+Liability Shift) and Mastercard SecureCode SL2
+(Global Liability Shift)
+
+Updated table title from Acquirer Identified
+Addendum to Addendum Charges
+
+Addendum Charges
+
+Updated table elements: IPM Second Presentment
+Message Reason Code and Notes.
+
+©1988–2018 Mastercard. Proprietary. All rights reserved.
+Chargeback Guide • 1 May 2018
+
+2
+
+Summary of Changes, 1 May 2018
+
+Description of Change
+
+Where to Look
+
+Updated Chip Liability Shift table elements
+
+Chip Liability Shift
+
+Second Presentment Condition bullet #2,
+Supporting Documents and DE 72.
+
+Updated table elements:
+
+Addendum Disputes
+
+Arbitration Chargeback Condition bullet 1 and 2,
+and Supporting Documents
+
+Deleted: “Invalid Proof of Card Presence and
+Signature” topic
+
+Updated bullet: Properly identified Mastercard
+SecureCode, Masterpass by Mastercard, and
+Digital Secure Remote Payment (DSRP)
+transactions
+
+Updated bullet three in topic
+
+Was between Guaranteed Reservation Services
+(”No-show”) and Acquirer Reference Data (ARD)
+Does Not Match or is Invalid
+
+Cardholder Does Not Recognize 
+
+Mastercard SecureCode SL1 (Merchant-only
+Liability Shift) and Mastercard SecureCode SL2
+(Global Liability Shift)
+
+Updated table element: Supporting Documents.
+
+Addendum Transaction
+
+Updated table element: Supporting Documents.
+
+Added last bullet “Mastercard Biometric Card” to
+bullet list under Chip Liability Shift Participation
+table
+
+Updated Lost/Stolen/NRI Fraud Chip Liability Shift
+Participation table element, definition to term:
+PIN-capable hybrid POS terminal
+
+Updated bullet #6, third sub-bullet.
+
+Added last bullet “Mastercard Biometric Card” to
+bullet list under Lost/Stolen/NRI Fraud Chip
+Liability Shift Participation table
+
+Changed heading name from IPM Second
+Presentment Message Reason Code to IPM
+Arbitration Chargeback Message Reason Code
+
+Removed first bullet in Supporting Documents
+section
+
+Conflicting Information in Authorization and
+Clearing Messages
+
+Chip Liability Shift 
+
+Chip Liability Shift—Lost/Stolen/Never Received
+Issue (NRI) Fraud 
+
+Arbitration Chargeback
+
+©1988–2018 Mastercard. Proprietary. All rights reserved.
+Chargeback Guide • 1 May 2018
+
+3
+
+Summary of Changes, 1 May 2018
+
+Description of Change
+
+Where to Look
+
+Removed topic: Invalid Proof of Card Presence and
+Signature
+
+Chapter 4 Arbitration Case Filing
+
+Updated references from Chief Franchise Integrity
+Office to Chief Franchise Officer
+
+Throughout Appeals
+
+New Chapter 6 Masterpass QR
+
+Added a new chapter in between Compliance
+Case Filing and Chargebacks--Mastercard Europ
+ATM Transactions (Mastercard, Maestro, and
+Cirrus).
+
+Masterpass QR
+
+Appendix B Chargebacks—Maestro POS Transactions
+
+Intra-European Message Reason Code 4855—
+Goods or Services Not Provided
+
+Intra-European Message Reason Code 4855—
+Goods or Services Not Provided
+
+• Added table: Failed Travel Merchant Dispute—
+Intra-EEA and Domestic European Transactions
+Only under Charge

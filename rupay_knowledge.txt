@@ -1,0 +1,511 @@
+=== RuPay Global Clearing and Settlement ===
+
+National Payments Corporation of India 
+
+RuPay Global Clearing 
+and Settlement 
+Technical Message 
+Specification 
+
+Version 1.9 
+
+Release Year 2017 
+
+RuPay Global Clearing And Settlement Technical Message Specification – 1.9 
+
+ 
+ 
+ 
+ 
+ 
+Revision History 
+
+Revision History 
+
+of 
+
+Date 
+Change 
+12-12-2012 
+
+Version 
+No 
+1.4 
+
+2.10 
+
+Section  Reason for Change 
+
+Summary of Change 
+
+added 
+
+for 
+Definition 
+Header  Message,  Onus 
+Transaction, 
+DMS 
+Transaction, 
+Authorization  Reversal 
+Transaction,  and  Trailer 
+Message. 
+Row  added 
+Transaction, 
+Transaction, 
+Message, 
+Message. 
+Onus  Transaction  added 
+in the Table. 
+
+for  DMS 
+Onus 
+Header 
+and  Trailer 
+
+12-12-2012 
+
+1.4 
+
+3.5 
+
+12-12-2012 
+
+1.4 
+
+& 
+
+3.6 
+4.7.1 
+
+12-12-2012 
+
+1.4 
+
+3.7.10 
+
+Data 
+‘RGCS 
+element 
+Serial  No  Reject  Reason 
+Code’ renamed.  
+
+12-12-2012 
+
+1.4 
+
+3.7.20  & 
+3.7.21 
+
+XML tag corrected 
+
+12-12-2012 
+
+1.4 
+
+Appendi
+x A2 
+
+Action/  Response  Code 
+table updated. 
+
+12-12-2012 
+
+1.4 
+
+4.7.1 
+
+DMS  Messages  pertains 
+to Issuer table updated. 
+
+12-12-2012 
+
+1.4 
+
+12-12-2012 
+
+1.4 
+
+Annexur
+e C22 
+5.3.6 
+
+New Annexure Added 
+
+Line  added  in  format  of 
+ARD definition. 
+
+CCR 
+Number 
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+6 
+
+7 
+
+8 
+
+9 
+
+added 
+
+for 
+Definition 
+Header  Message,  Onus 
+Transaction, 
+DMS 
+Transaction, 
+Authorization  Reversal 
+Transaction,  and  Trailer 
+Message. 
+for  DMS 
+Row  added 
+Onus 
+Transaction, 
+Transaction, 
+Header 
+Message,  and  Trailer 
+Message. 
+Onus  Transaction  added 
+under  outgoing  column 
+for SMS Msg available in 
+XML  files  &  DMS  Msg 
+available in XML files 
+Data 
+‘RGCS 
+element 
+Serial  No  Reject  Reason 
+Code’  renamed  to  ‘RGCS 
+Record  Reject  Reason 
+Code’ 
+XML  tag  corrected  for 
+the  data  element  ‘RGCS 
+Received date’  
+‘Decline  Status’  column 
+Duplicate 
+added. 
+response  code  deleted. 
+New  Response  Codes 
+introduced. 
+Web-Acknowledgement 
+column of DMS Messages 
+pertains  to  Issuer  table 
+updated. 
+Annexure  of  Mod  10 
+algorithm logic added. 
+
+given 
+
+Reference 
+for 
+Annexure C22 – mod 10 
+algorithm.  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Revision History 
+
+of 
+
+Date 
+Change 
+02-01-2013 
+
+Version 
+No 
+1.4 
+
+02-01-2013 
+
+1.4 
+
+15-04-2013 
+
+1.4 
+
+03-06-2013 
+
+1.4 
+
+03-06-2013 
+
+1.4 
+
+03-06-2013 
+
+1.4 
+
+03-06-2013 
+
+1.4 
+
+03-06-2013 
+
+1.4 
+
+14-06-2013 
+
+1.4 
+
+17-06-2013 
+
+1.4 
+
+17-06-2013 
+
+1.4 
+
+17-06-2013 
+
+1.4 
+
+Appendi
+x E 
+
+Appendi
+x F 
+
+Appendi
+x C18 
+Appendi
+x J 
+Appendi
+x C, C15 
+Appendi
+x C, C16 
+Appendi
+x C, C17 
+Appendi
+x C, C18 
+Appendi
+x C, C10 
+
+Appendi
+x  C,  C4, 
+C5 
+Appendi
+x C, C7 
+4.8.4 
+
+Section  Reason for Change 
+
+Summary of Change 
+
+Type  corrected  for  Card 
+domain. 
+
+Min Length corrected for 
+Acquirer Id 
+
+List of card scheme code 
+modified. 
+
+Type  of  data  element 
+‘Card  Domain’  changed 
+from N2 to A1 
+Min  Length  of  data 
+element 
+Id’ 
+changed from N11 to N6 
+List of card scheme code 
+added for domestic. 
+
+‘Acquirer 
+
+RAW  Data  File  Format 
+added. 
+
+RAW  data  file  format 
+specification added. 
+
+List  of  Card  Product 
+added 
+
+New value “05” added as 
+“other Scheme” 
+
+List  of  Card  Variant 
+added 
+
+New value “11” added as 
+“other Scheme” 
+
+List  of  Card  Technology 
+added 
+
+New  value  “DEF”  added 
+as “other Scheme” 
+
+List  of  Card  Scheme 
+added 
+
+Card scheme code added 
+for DCI & JCB 
+
+Product  Code  added  as 
+ATM01 
+
+Reason  Code  description 
+modified. 
+
+Reject 
+added. 
+
+reason 
+
+code 
+
+Void 
+specification updated 
+
+transaction 
+
+CCR 
+Number 
+10   
+
+11   
+
+12   
+
+13   
+
+14   
+
+15   
+
+16   
+
+17   
+
+18   
+
+19   
+
+20   
+
+21   
+
+22   
+
+23   
+
+24   
+
+25   
+
+Product  code  ATM01 
+ATM 
+for 
+added 
+transactions. 
+Debit 
+Credit 
+and 
+Adjustment Reason Code 
+description updated. 
+
+New  Reject  Reason 
+added. 
+
+Data  element  Amount, 
+and 
+transaction 
+Currency 
+Code, 
+Transaction are updated 
+as Conditional in ACK for 
+Void transaction. 
+Constraints  updated  for 
+Amount, Billing 
+
+Function 
+
+Message  Reason  Code 
+introduced 
+as 
+Conditional for Outgoing 
+Re-Presentment 
+transaction. 
+MTI, 
+introduced 
+Authorization 
+Transaction. 
+Re-presentment  Reason 
+for 
+introduced 
+code 
+International 
+Transaction. 
+
+Code 
+for  DMS 
+
+17-06-2013 
+
+1.4 
+
+5.3.49 
+
+22-06-2013 
+
+1.4 
+
+3.7.9 
+
+be 
+to 
+for  Amount, 
+
+Constraints 
+updated 
+Billing 
+Message  Reason  Code 
+added. 
+
+22-06-2013 
+
+1.4 
+
+Appendi
+x A 
+
+Function 
+for 
+
+MTI, 
+added 
+Authorization Txn 
+
+Code 
+DMS 
+
+24-06-2013 
+
+1.4 
+
+Appendi
+x C, C23 
+
+Re-presentment  Reason 
+code added. 
+
+RuPay Global Clearing and Settlement T

@@ -1,0 +1,54 @@
+=== MasterCard Transaction Processing Rules ===
+
+Transaction Processing
+Rules
+
+14 June 2022
+
+TPR
+
+Contents
+
+Contents
+
+Summary of Changes, 14 June 2022..........................................................................18
+
+Applicability of Rules in this Manual...........................................................................24
+
+Chapter 1: Connecting to the Interchange System and Authorization
+Routing..................................................................................................................................... 26
+1.1 Connecting to the Interchange System...................................................................................... 28
+1.2 Authorization Routing—Mastercard POS Transactions........................................................... 28
+1.3 Authorization Routing—Maestro, Cirrus, and ATM Transactions............................................29
+1.3.1 Routing Instructions and System Maintenance................................................................29
+1.3.2 Chip Transaction Routing......................................................................................................30
+1.3.3 Domestic Transaction Routing.............................................................................................30
+1.4 ATM Terminal Connection to the Interchange System.............................................................30
+1.5 Gateway Processing.......................................................................................................................31
+1.6 POS Terminal Connection to the Interchange System.............................................................31
+Variations and Additions by Region....................................................................................................32
+Asia/Pacific Region................................................................................................................................32
+1.4 ATM Terminal Connection to the Interchange System....................................................... 32
+1.6 POS Terminal Connection to the Interchange System....................................................... 32
+Canada Region.......................................................................................................................................32
+1.3 Authorization Routing—Maestro, Cirrus, and ATM Transactions...................................... 32
+1.3.3 Domestic Transaction Routing....................................................................................... 32
+1.4 ATM Terminal Connection to the Interchange System....................................................... 33
+Europe Region.........................................................................................................................................33
+1.1 Connecting to the Interchange System.................................................................................33
+1.2 Authorization Routing—Mastercard POS Transactions......................................................33
+1.3 Authorization Routing—Maestro, Cirrus, and ATM Transactions...................................... 34
+1.3.2 Chip Transaction Routing................................................................................................ 34
+1.3.3 Domestic Transaction Routing....................................................................................... 34
+1.4 ATM Terminal Connection to the Interchange System—SEPA Only................................. 34
+Latin America and the Caribbean Region......................................................................................... 34
+1.4 ATM Terminal Connection to the Interchange System....................................................... 34
+1.6 POS Terminal Connection to the Interchange System....................................................... 34
+United States Region............................................................................................................................ 35
+1.1 Connecting to the Interchange System.................................................................................35
+1.3 Authorization Routing—Maestro, Cirrus, and ATM Transactions...................................... 35
+1.3.1 Routing Instructions and System Maintenance.......................................................... 35
+1.3.3 Domestic Transaction Routing....................................................................................... 36
+
+© 2013–2022 Mastercard. Proprietary. All rights reserved.
+T
