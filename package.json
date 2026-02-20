@@ -2,5 +2,5 @@
   "name": "cis-chatbot",
   "version": "1.0.0",
   "description": "MasterCard CIS Assistant - AI Chatbot for ISO 8583",
-  "engines": { "node": "18.x" }
+  "engines": { "node": "24.x" }
 }
